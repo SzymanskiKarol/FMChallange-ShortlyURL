@@ -110,3 +110,13 @@ function getLinks() {
         })
     })
 }
+
+
+// Mobile hamburger menu
+
+const burger = document.querySelector(".burger-img");
+
+burger.addEventListener("click", function () {
+    document.querySelector(".nav-links").classList.toggle("hidden");
+    document.querySelector(".worker").classList.toggle("hidden");
+})
