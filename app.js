@@ -14,7 +14,6 @@ function addNewLink() {
             .then((response) => response.json())
             .then((data) => {
                 console.log('Success:', data);
-                console.log(data.result.short_link);
                 let newDiv = document.createElement("div");
                 newDiv.innerHTML = `<a class="long-link" href="${linkToShortEl.value}" target="_blank">${linkToShortEl.value}</a>
                 <div class="short-link-container-right">
@@ -31,13 +30,10 @@ function addNewLink() {
                 }
 
                 if (!linksArr.includes(newDiv.innerHTML)) {
-                    console.log(newDiv.innerHTML);
                     saveLocalLink(newDiv.innerHTML)
                     shortenLinksSection.appendChild(newDiv);
                     linkToShortEl.value = "";
-                    console.log("okej");
                 } else {
-                    console.log("not okej");
                     linkToShortEl.classList.add("error");
                     document.querySelector(".message").innerText = "This link is already shortened"
                     setTimeout(() => {
