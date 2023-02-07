@@ -32,6 +32,7 @@ function addNewLink() {
                 if (!linksArr.includes(newDiv.innerHTML)) {
                     saveLocalLink(newDiv.innerHTML)
                     shortenLinksSection.appendChild(newDiv);
+                    window.location.reload();
                     linkToShortEl.value = "";
                 } else {
                     linkToShortEl.classList.add("error");
