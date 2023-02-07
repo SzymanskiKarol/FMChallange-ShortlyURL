@@ -159,7 +159,28 @@ nav {
     width: 70%;
     padding: 10px;
     border-radius: 5px;
+    position: relative;
 }
+
+.error {
+    border-color: var(--Red);
+    border-width: 3px;
+    color: var(--Red);
+}
+
+.error::placeholder {
+    color: var(--Red);
+}
+
+.sec-2 span {
+    color: var(--Red);
+    position: absolute;
+    bottom: 20px;
+    left: 60px;
+    font-size: .75rem;
+    font-style: italic;
+}
+
 
 .sec-2 button {
     width: 15%;
@@ -204,7 +225,7 @@ nav {
 .long-link {
     /* display: flex; */
     /* max-width: 50%; */
-    inline-size: 50%;
+    inline-size: 40%;
     overflow-wrap: break-word;
     color: var(--Very-Dark-Violet);
     font-weight: 700;
@@ -240,6 +261,13 @@ nav {
 
 
 
+
+.remove {
+    color: red;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
 
 .clicked {
     background: var(--Very-Dark-Violet);
